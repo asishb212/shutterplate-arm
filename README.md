@@ -1,6 +1,7 @@
 # shutterplate-arm
 ![python](https://img.shields.io/badge/Python-3.8-yellow)
 ![ROS](https://img.shields.io/badge/ROS-Noetic-brightgreen)
+![CMake](https://img.shields.io/badge/-CMake-critical)
 <p></p>
 <h2>for webots</h2>
 <p>use "blah" folder</p>
