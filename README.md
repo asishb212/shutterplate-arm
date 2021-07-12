@@ -1,5 +1,6 @@
 # shutterplate-arm
-![python](https://img.shields.io/github/pipenv/locked/python-version/asishb212/shutterplate-arm)
+![python](https://img.shields.io/badge/-Python-black?style=plastic&logo=Python))
+![ROS](https://img.shields.io/badge/ROS-Noetic-brightgreen)
 <p></p>
 <h2>for webots</h2>
 <p>use "blah" folder</p>
