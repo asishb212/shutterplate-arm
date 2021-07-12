@@ -1,5 +1,5 @@
 # shutterplate-arm
-![python](https://img.shields.io/badge/-Python-black?style=plastic&logo=Python))
+![python](https://img.shields.io/badge/Python-3.8-yellow)
 ![ROS](https://img.shields.io/badge/ROS-Noetic-brightgreen)
 <p></p>
 <h2>for webots</h2>
