@@ -1,0 +1,10 @@
+<launch>
+	<include file="$(find asseyendmvit)/launch/gazebo.launch"/>
+	<include file="$(find asseyendmvit)/launch/move_group.launch"/>
+	<include file="$(find asseyendmvit)/launch/moveit_rviz.launch">
+		<arg name="rviz_config" value="$(find asseyendmvit)/launch/moveit.rviz"/>
+	</include>
+	<arg name="scene_file" default="$(find asseyendmvit)/scenes/task3.scene"/> 
+	<!--<node name = "moveit_publish_scene_from_text" pkg= "moveit_ros_planning" type = "moveit_publish_scene_from_text" args= "$(arg scene_file)"/>-->
+	<node name="controller" pkg="asseyendmvit" type="controller.py" output="screen"/>
+</launch>

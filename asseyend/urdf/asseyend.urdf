@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="asseyend">
+    <link name="base_link">
+        
+<inertial>
+            <origin xyz="0.00656870351939786 -7.67784056600918E-05 0.0386933672128964" rpy="0 0 0" />
+            <mass value="5.76939415331174" />
+            <inertia ixx="0.0364585376862836" ixy="0.00079967189831831" ixz="-4.14161585296653E-05" iyy="0.0364585376862836" iyz="-4.14161585296622E-05" izz="0.0665644380651611" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.796078431372549 0.796078431372549 0.796078431372549 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="c1">
+        
+<inertial>
+            <origin xyz="-0.0591888309379308 -0.00400053036941213 0.0849442671080836" rpy="0 0 0" />
+            <mass value="2.39364181041843" />
+            <inertia ixx="0.00499410003296028" ixy="-0.000109635040146548" ixz="0.00169946708371175" iyy="0.009161860285125" iyz="7.33126840235941E-05" izz="0.00869780400381183" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.796078431372549 0.796078431372549 0.796078431372549 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="m1" type="continuous">
+        <origin xyz="0.0051422 -0.0015032 0.084" rpy="0 0 1.2128" />
+        <parent link="base_link" />
+        <child link="c1" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="c2">
+        
+<inertial>
+            <origin xyz="-0.149076769615548 -0.00825694254505338 0.0371212976814389" rpy="0 0 0" />
+            <mass value="0.92753935043736" />
+            <inertia ixx="0.000552993584997618" ixy="-0.000211380216192206" ixz="4.87391187236814E-05" iyy="0.0179557612133148" iyz="-9.32892538000452E-06" izz="0.018242540789793" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.796078431372549 0.796078431372549 0.796078431372549 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="m2" type="continuous">
+        <origin xyz="-0.15 0 0.16" rpy="1.5708 1.175 -3.1416" />
+        <parent link="c1" />
+        <child link="c2" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="c3">
+        
+<inertial>
+            <origin xyz="0.0403845486641832 0.032416951867913 0.0385515354076685" rpy="0 0 0" />
+            <mass value="1.39795501582072" />
+            <inertia ixx="0.00195933427531133" ixy="-0.00016780033614291" ixz="-0.00038603040767962" iyy="0.00749990017893449" iyz="-0.000191170868309335" izz="0.00716509595786076" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.796078431372549 0.796078431372549 0.796078431372549 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="m3" type="continuous">
+        <origin xyz="-0.35 0 0" rpy="-1.5708 0 1.0293" />
+        <parent link="c2" />
+        <child link="c3" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="c4">
+        
+<inertial>
+            <origin xyz="-0.13365510843076 1.86691062054045E-08 -2.3384296097273E-06" rpy="0 0 0" />
+            <mass value="0.55094055098402" />
+            <inertia ixx="0.000513531257896778" ixy="6.74179397170663E-10" ixz="-1.4056903164374E-08" iyy="0.00131606984706943" iyz="6.35796368895006E-12" izz="0.00145535507428438" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="m4" type="continuous">
+        <origin xyz="0.18049 0.0355 0.045291" rpy="2.4013 0 3.1416" />
+        <parent link="c3" />
+        <child link="c4" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="c5">
+        
+<inertial>
+            <origin xyz="-1.43534917840249E-08 -0.0581645078841896 -3.27619115170208E-09" rpy="0 0 0" />
+            <mass value="0.336411503258623" />
+            <inertia ixx="0.000361384811823778" ixy="-7.75585980462563E-11" ixz="7.99521813839754E-13" iyy="0.000239673115718051" iyz="1.64430557208288E-11" izz="0.00035887115103781" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="m5" type="continuous">
+        <origin xyz="-0.17922 0 0" rpy="-1.4616 0 -1.5708" />
+        <parent link="c4" />
+        <child link="c5" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="c6">
+        
+<inertial>
+            <origin xyz="-1.28699434442936E-08 2.25543661525052E-09 0.00218741900175046" rpy="0 0 0" />
+            <mass value="0.0627451477183633" />
+            <inertia ixx="2.222165561803E-05" ixy="4.24904096977386E-12" ixz="2.7048264141156E-12" iyy="2.22216987648166E-05" iyz="3.71322891607607E-12" izz="3.39790255431213E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c6.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c6.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="m6" type="continuous">
+        <origin xyz="0 -0.10858 0" rpy="-1.5708 0.0019925 0" />
+        <parent link="c5" />
+        <child link="c6" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="c7">
+        
+<inertial>
+            <origin xyz="7.1731293488364E-08 6.89943513432212E-09 -0.0315486348318286" rpy="0 0 0" />
+            <mass value="0.134102855738052" />
+            <inertia ixx="0.000112174706955116" ixy="-1.85151935998978E-12" ixz="-1.20786152061918E-10" iyy="0.000112174485059579" iyz="-2.0688511972631E-11" izz="4.70371510913099E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c7.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.796078431372549 0.796078431372549 0.796078431372549 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://asseyend/meshes/c7.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="m7" type="fixed">
+        <origin xyz="0 0 -0.019417" rpy="0 0 1.0472" />
+        <parent link="c6" />
+        <child link="c7" />
+        <axis xyz="0 0 0" />
+    </joint>
+<transmission name="trans_m1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="m1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="m1_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_m2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="m2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="m2_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_m3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="m3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="m3_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_m4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="m4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="m4_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_m5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="m5">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="m5_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_m6">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="m6">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="m6_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
