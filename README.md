@@ -8,8 +8,14 @@
 <p>use asseyendmvit for moveit</p>
 <h2><b>ROS supported version : NOETIC </b></h2>
 <h2>ROS requirements</h2>
-<p>moveit</p>
-<p>robot_state_controller</p>
+
+````
+sudo apt install ros-noetic-moveit
+sudo apt install ros-noetic-moveit-ros-planning
+sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
+sudo apt-get install ros-noetic-robot-state-publisher
+````
+
 <h2>setup</h2>
 
 ````
