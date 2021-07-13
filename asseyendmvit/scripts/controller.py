@@ -4,7 +4,7 @@ import rospy
 import sys
 import moveit_commander
 import geometry_msgs.msg
-from gazebo_ros_link_attacher.srv import Attach, AttachRequest, AttachResponse
+from gazebo_ros_link_attacher.srv import Attach, AttachRequest
 from tf.transformations import euler_from_quaternion,quaternion_from_euler
 import yaml
 import time
@@ -75,8 +75,8 @@ for i in range(iters):
 
     arm.set_pose_target(pose2)
     plan=arm.go(wait=True)
-
-    print("Attaching cylinder to arm \033[0;32m")
+    
+    print("Attaching cylinder to arm")
     req = AttachRequest()
     req.model_name_1 = "robot"
     req.link_name_1 = "c6"
@@ -84,19 +84,25 @@ for i in range(iters):
     req.link_name_2 = "link"
     attach_srv.call(req)
     time.sleep(2)
-
+    
     arm.set_pose_target(pose1)
     plan=arm.go(wait=True)
     time.sleep(delay)
 
-    arm.set_pose_target(pose3)
-    plan=arm.go(wait=True)
+    joints=arm.get_current_joint_values()
+    joints[0]=-3.085023245079391
+    plan=arm.go(joints)
     time.sleep(delay)
 
+    #arm.set_pose_target(pose3)
+    #plan=arm.go(wait=True)
+    #time.sleep(delay)
+    
     arm.set_pose_target(pose4)
     plan=arm.go(wait=True)
     time.sleep(delay)
-
+    
+    time.sleep(2)
     rospy.loginfo("Detaching cylinder to arm \033[0;32m")
     req = AttachRequest()
     req.model_name_1 = "robot"
@@ -104,11 +110,8 @@ for i in range(iters):
     req.model_name_2 = "unit_cylinder"
     req.link_name_2 = "link"
     detach_srv.call(req)
-    time.sleep(2)
 
     arm.set_pose_target(pose3)
     plan=arm.go(wait=True)
     time.sleep(delay)
     
-    arm.set_pose_target(pose1)
-    plan=arm.go(wait=True)

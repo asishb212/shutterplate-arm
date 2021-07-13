@@ -1,6 +1,6 @@
 <sdf version='1.7'>
   <world name='default'>
-    <plugin name="ros_link_attacher_plugin" filename="libgazebo_ros_link_attacher.so"/>
+    <plugin name='ros_link_attacher_plugin' filename='libgazebo_ros_link_attacher.so'/>
     <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
       <pose>0 0 10 0 -0 0</pose>
@@ -144,10 +144,10 @@
       </link>
     </model>
     <state world_name='default'>
-      <sim_time>217 794000000</sim_time>
-      <real_time>70 412347065</real_time>
-      <wall_time>1626090042 693731037</wall_time>
-      <iterations>68872</iterations>
+      <sim_time>241 667000000</sim_time>
+      <real_time>24 405549980</real_time>
+      <wall_time>1626194954 579370390</wall_time>
+      <iterations>23873</iterations>
       <model name='ground_plane'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -158,14 +158,24 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='unit_cylinder'>
-        <pose>-0.109628 -0.469212 0.073016 -0 -0 -3.06433</pose>
-        <scale>0.121986 0.121986 0.068025</scale>
+      <model name='unit_box'>
+        <pose>-0.157619 -0.456914 0.008976 -3e-06 1.6e-05 -4.5e-05</pose>
+        <scale>0.524865 0.158873 0.018265</scale>
         <link name='link'>
-          <pose>-0.109628 -0.469212 0.073016 -0 -0 -3.06433</pose>
+          <pose>-0.157619 -0.456914 0.008976 -3e-06 1.6e-05 -4.5e-05</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -9.8 0 -0 0</wrench>
+          <acceleration>-0.043899 -0.03024 -28.7395 2.36626 -0.422107 0.001178</acceleration>
+          <wrench>-0.043899 -0.03024 -28.7395 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='unit_cylinder'>
+        <pose>-0.11059 -0.458217 0.070389 2.1e-05 -2.9e-05 -3.06479</pose>
+        <scale>0.119889 0.119889 0.104559</scale>
+        <link name='link'>
+          <pose>-0.11059 -0.458217 0.070389 2.1e-05 -2.9e-05 -3.06479</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.043899 0.03024 9.13954 -2.52231 -0.609315 -0.013429</acceleration>
+          <wrench>0.043899 0.03024 9.13954 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
@@ -174,10 +184,63 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>4.86507 -0.284606 0.605831 0 0.155643 2.80419</pose>
+        <pose>0.902394 -0.432874 0.158102 0 0.155643 2.80419</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+    <model name='unit_box'>
+      <pose>-0.32798 -1.13021 0.5 0 -0 0</pose>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.999999 1 0.999985</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.999999 1 0.999985</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
   </world>
 </sdf>
