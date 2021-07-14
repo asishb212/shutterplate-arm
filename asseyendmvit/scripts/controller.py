@@ -19,7 +19,7 @@ attach_srv = rospy.ServiceProxy('/link_attacher_node/attach',Attach)
 attach_srv.wait_for_service()
 detach_srv = rospy.ServiceProxy('/link_attacher_node/detach',Attach)
 detach_srv.wait_for_service()
-print("\033[0;32m attach plugin loaded \033[0;32m")
+rospy.loginfo("\033[0;32m attach plugin loaded \033[0;32m")
 
 pose1=geometry_msgs.msg.Pose()
 pose1.position.x=rospy.get_param('/pickerup/position/x')
@@ -57,7 +57,6 @@ pose4.orientation.x=rospy.get_param('/dropdown/orientation/x')
 pose4.orientation.y=rospy.get_param('/dropdown/orientation/y')
 pose4.orientation.z=rospy.get_param('/dropdown/orientation/z')
 
-
 iters=1
 delay=0
 work_delay=1
@@ -70,7 +69,7 @@ for i in range(iters):
     arm.set_pose_target(pose2)
     plan=arm.go(wait=True)
     
-    print("\033[0;32m Attaching cylinder to arm \033[0;32m")
+    rospy.loginfo("\033[0;32m attaching cylinder to arm \033[0;32m")
     req = AttachRequest()
     req.model_name_1 = "robot"
     req.link_name_1 = "c6"
@@ -97,7 +96,7 @@ for i in range(iters):
     time.sleep(delay)
     
     time.sleep(2)
-    rospy.loginfo("Detaching cylinder to arm \033[0;32m")
+    rospy.loginfo("\033[0;32m Detaching cylinder to arm \033[0;32m")
     req = AttachRequest()
     req.model_name_1 = "robot"
     req.link_name_1 = "c6"
