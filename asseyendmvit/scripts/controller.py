@@ -20,49 +20,44 @@ attach_srv = rospy.ServiceProxy('/link_attacher_node/attach',Attach)
 attach_srv.wait_for_service()
 detach_srv = rospy.ServiceProxy('/link_attacher_node/detach',Attach)
 detach_srv.wait_for_service()
-print("attach plugin loaded \033[0;32m")
-
-joint_goal = arm.get_current_pose().pose
-print(joint_goal)
-
-with open("/home/asish/catkin_ws/src/asseyendmvit/scripts/coords.yaml",'r') as file:
-    poses=yaml.load(file,Loader=yaml.FullLoader)
+print("\033[0;32m attach plugin loaded \033[0;32m")
 
 pose1=geometry_msgs.msg.Pose()
-pose1.position.x=poses['pickerup']['position']['x']
-pose1.position.y=poses['pickerup']['position']['y']
-pose1.position.z=poses['pickerup']['position']['z']
-pose1.orientation.w=poses['pickerup']['orientation']['w']
-pose1.orientation.x=poses['pickerup']['orientation']['x']
-pose1.orientation.y=poses['pickerup']['orientation']['y']
-pose1.orientation.z=poses['pickerup']['orientation']['z']
+pose1.position.x=rospy.get_param('/pickerup/position/x')
+pose1.position.y=rospy.get_param('/pickerup/position/y')
+pose1.position.z=rospy.get_param('/pickerup/position/z')
+pose1.orientation.w=rospy.get_param('/pickerup/orientation/w')
+pose1.orientation.x=rospy.get_param('/pickerup/orientation/x')
+pose1.orientation.y=rospy.get_param('/pickerup/orientation/y')
+pose1.orientation.z=rospy.get_param('/pickerup/orientation/z')
 
 pose2=geometry_msgs.msg.Pose()
-pose2.position.x=poses['pickerdown']['position']['x']
-pose2.position.y=poses['pickerdown']['position']['y']
-pose2.position.z=poses['pickerdown']['position']['z']
-pose2.orientation.w=poses['pickerdown']['orientation']['w']
-pose2.orientation.x=poses['pickerdown']['orientation']['x']
-pose2.orientation.y=poses['pickerdown']['orientation']['y']
-pose2.orientation.z=poses['pickerdown']['orientation']['z']
+pose2.position.x=rospy.get_param('/pickerdown/position/x')
+pose2.position.y=rospy.get_param('/pickerdown/position/y')
+pose2.position.z=rospy.get_param('/pickerdown/position/z')
+pose2.orientation.w=rospy.get_param('/pickerdown/orientation/w')
+pose2.orientation.x=rospy.get_param('/pickerdown/orientation/x')
+pose2.orientation.y=rospy.get_param('/pickerdown/orientation/y')
+pose2.orientation.z=rospy.get_param('/pickerdown/orientation/z')
 
 pose3=geometry_msgs.msg.Pose()
-pose3.position.x=poses['dropup']['position']['x']
-pose3.position.y=poses['dropup']['position']['y']
-pose3.position.z=poses['dropup']['position']['z']
-pose3.orientation.w=poses['dropup']['orientation']['w']
-pose3.orientation.x=poses['dropup']['orientation']['x']
-pose3.orientation.y=poses['dropup']['orientation']['y']
-pose3.orientation.z=poses['dropup']['orientation']['z']
+pose3.position.x=rospy.get_param('/dropup/position/x')
+pose3.position.y=rospy.get_param('/dropup/position/y')
+pose3.position.z=rospy.get_param('/dropup/position/z')
+pose3.orientation.w=rospy.get_param('/dropup/orientation/w')
+pose3.orientation.x=rospy.get_param('/dropup/orientation/x')
+pose3.orientation.y=rospy.get_param('/dropup/orientation/y')
+pose3.orientation.z=rospy.get_param('/dropup/orientation/z')
 
 pose4=geometry_msgs.msg.Pose()
-pose4.position.x=poses['dropdown']['position']['x']
-pose4.position.y=poses['dropdown']['position']['y']
-pose4.position.z=poses['dropdown']['position']['z']
-pose4.orientation.w=poses['dropdown']['orientation']['w']
-pose4.orientation.x=poses['dropdown']['orientation']['x']
-pose4.orientation.y=poses['dropdown']['orientation']['y']
-pose4.orientation.z=poses['dropdown']['orientation']['z']
+pose4.position.x=rospy.get_param('/dropdown/position/x')
+pose4.position.y=rospy.get_param('/dropdown/position/y')
+pose4.position.z=rospy.get_param('/dropdown/position/z')
+pose4.orientation.w=rospy.get_param('/dropdown/orientation/w')
+pose4.orientation.x=rospy.get_param('/dropdown/orientation/x')
+pose4.orientation.y=rospy.get_param('/dropdown/orientation/y')
+pose4.orientation.z=rospy.get_param('/dropdown/orientation/z')
+
 
 iters=1
 delay=0

@@ -4,5 +4,6 @@
 	<!--<include file="$(find asseyendmvit)/launch/moveit_rviz.launch">
 		<arg name="rviz_config" value="$(find asseyendmvit)/launch/moveit.rviz"/>
 	</include>-->
+	<rosparam file="$(find asseyendmvit)/scripts/coords.yaml"/>
 	<node name="controller" pkg="asseyendmvit" type="controller.py" output="screen"/>
 </launch>
