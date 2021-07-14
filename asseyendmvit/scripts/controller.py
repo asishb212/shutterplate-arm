@@ -6,7 +6,6 @@ import moveit_commander
 import geometry_msgs.msg
 from gazebo_ros_link_attacher.srv import Attach, AttachRequest
 from tf.transformations import euler_from_quaternion,quaternion_from_euler
-import yaml
 import time
 
 moveit_commander.roscpp_initialize(sys.argv)
@@ -71,7 +70,7 @@ for i in range(iters):
     arm.set_pose_target(pose2)
     plan=arm.go(wait=True)
     
-    print("Attaching cylinder to arm")
+    print("\033[0;32m Attaching cylinder to arm \033[0;32m")
     req = AttachRequest()
     req.model_name_1 = "robot"
     req.link_name_1 = "c6"
