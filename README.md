@@ -2,10 +2,7 @@
 ![python](https://img.shields.io/badge/Python-3.8-yellow)
 ![ROS](https://img.shields.io/badge/ROS-Noetic-brightgreen)
 ![CMake](https://img.shields.io/badge/CMake-3.3-critical)
-<p></p>
-<h2>for webots</h2>
-<p>use "blah" folder</p>
-<p>contains proto,wbt and controller script for shutterplate assembly arm</p>
+
 <h2>ROS packages</h2>
 <p>use asseyend for urdfs</p>
 <p>use asseyendmvit for moveit</p>
