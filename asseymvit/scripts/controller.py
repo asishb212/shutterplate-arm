@@ -61,7 +61,7 @@ pose4.orientation.z=rospy.get_param('/dropdown/orientation/z')
 
 iters=2
 delay=0
-work_delay=1
+work_delay=0
 for i in range(iters):
 
     arm.set_pose_target(pose1)
@@ -80,16 +80,15 @@ for i in range(iters):
     attach_srv.call(req)
     time.sleep(2)
     '''
+    arm.set_pose_target(pose1)
+    plan=arm.go(wait=True)
+    time.sleep(delay)
 
     rotor_joint=rotor.get_current_joint_values()
     rotor_joint[0]+=radians(27/2)
     plan=rotor.go(rotor_joint)
     time.sleep(delay)
-
-    arm.set_pose_target(pose1)
-    plan=arm.go(wait=True)
-    time.sleep(delay)
-
+    
     joints=arm.get_current_joint_values()
     joints[0]=-3.085023245079391
     plan=arm.go(joints)

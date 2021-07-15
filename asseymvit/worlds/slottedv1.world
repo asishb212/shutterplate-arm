@@ -88,7 +88,7 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <model name='unit_cylinder'>
-      <pose>0.175635 -1.4485 0.5 0 -0 0</pose>
+      <pose>-1.2657 -0.009104 0.5 0 -0 0</pose>
       <link name='link'>
         <inertial>
           <mass>1</mass>
@@ -106,7 +106,7 @@
           <geometry>
             <cylinder>
               <radius>0.5</radius>
-              <length>1</length>
+              <length>1.00001</length>
             </cylinder>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -127,7 +127,7 @@
           <geometry>
             <cylinder>
               <radius>0.5</radius>
-              <length>1</length>
+              <length>1.00001</length>
             </cylinder>
           </geometry>
           <material>
@@ -143,10 +143,10 @@
       </link>
     </model>
     <state world_name='default'>
-      <sim_time>68 654000000</sim_time>
-      <real_time>7 290014298</real_time>
-      <wall_time>1626089478 851876425</wall_time>
-      <iterations>6829</iterations>
+      <sim_time>110 459000000</sim_time>
+      <real_time>113 349918749</real_time>
+      <wall_time>1626283767 675396890</wall_time>
+      <iterations>110459</iterations>
       <model name='ground_plane'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -158,13 +158,13 @@
         </link>
       </model>
       <model name='unit_cylinder'>
-        <pose>-0.062026 -0.689534 0.040249 -0 -0 -0</pose>
-        <scale>0.221986 0.221986 0.080499</scale>
+        <pose>-0.052281 -0.48106 0.080397 8.3e-05 1.9e-05 0.00967</pose>
+        <scale>0.025251 0.025251 0.034795</scale>
         <link name='link'>
-          <pose>-0.062026 -0.689534 0.040249 -0 -0 -0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -9.8 0 -0 0</wrench>
+          <pose>-0.052281 -0.48106 0.080397 8.3e-05 1.9e-05 0.00967</pose>
+          <velocity>0.001193 -0.000122 0.006268 -0.000176 0.000164 8.3e-05</velocity>
+          <acceleration>1.19321 -0.121905 6.26755 -0.175977 0.163829 0.082537</acceleration>
+          <wrench>1.19321 -0.121905 6.26755 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
@@ -173,7 +173,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>0.349702 -4.4993 0.957971 -0 0.099643 1.38419</pose>
+        <pose>0.543802 -0.542955 0.268664 0 0.163643 -3.11499</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
