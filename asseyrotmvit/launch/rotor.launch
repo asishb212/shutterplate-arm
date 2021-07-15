@@ -1,7 +1,0 @@
-<launch>
-	<include file="$(find asseyrotmvit)/launch/gazebo.launch"/>
-	<include file="$(find asseyrotmvit)/launch/move_group.launch"/>
-    <include file="$(find asseyrotmvit)/launch/moveit_rviz.launch">
-		<arg name="rviz_config" value="$(find asseyrotmvit)/launch/moveit.rviz"/>
-	</include>
-</launch>

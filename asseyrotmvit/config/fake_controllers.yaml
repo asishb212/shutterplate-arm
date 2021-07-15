@@ -1,8 +1,0 @@
-controller_list:
-  - name: fake_rotor_controller
-    type: $(arg execution_type)
-    joints:
-      - mtr1
-initial:  # Define initial robot poses.
-  - group: rotor
-    pose: a

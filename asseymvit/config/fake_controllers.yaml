@@ -1,0 +1,21 @@
+controller_list:
+  - name: fake_arm_controller
+    type: $(arg execution_type)
+    joints:
+      - m1
+      - m2
+      - m3
+      - m4
+      - m5
+      - m6
+  - name: fake_end_controller
+    type: $(arg execution_type)
+    joints:
+      []
+  - name: fake_rotor_controller
+    type: $(arg execution_type)
+    joints:
+      - mtr1
+initial:  # Define initial robot poses.
+  - group: arm
+    pose: allzeros

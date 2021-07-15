@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: asseyend
+    relative_path: urdf/asseyend.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/asseyend.srdf
+  CONFIG:
+    author_name: sc
+    author_email: dv@sg.com
+    generated_timestamp: 1626279978

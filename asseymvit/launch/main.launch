@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find asseymvit)/launch/gazebo.launch"/>
+	<include file="$(find asseymvit)/launch/move_group.launch"/>
+	<!--<include file="$(find asseymvit)/launch/moveit_rviz.launch">
+		<arg name="rviz_config" value="$(find asseymvit)/launch/moveit.rviz"/>
+	</include>-->
+	<rosparam file="$(find asseymvit)/scripts/coords.yaml"/>
+	<node name="controller" pkg="asseymvit" type="controller.py" output="screen"/>
+</launch>
