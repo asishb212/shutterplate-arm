@@ -27,7 +27,7 @@ mkdir -p catkin_ws/src
 cd catkin_ws/
 catkin_make
 cd src/
-git clone https://github.com/asishb212/shutterplate-arm.git
+git clone -b old https://github.com/asishb212/shutterplate-arm.git
 git clone https://github.com/pal-robotics/gazebo_ros_link_attacher.git
 cd ..
 catkin_make
