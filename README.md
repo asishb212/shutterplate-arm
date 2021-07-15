@@ -33,5 +33,5 @@ catkin_make
 <h2>Run simulation!!</h2>
 
 ````
-roslaunch asseyendmvit main.launch
+roslaunch asseymvit main.launch
 ````
