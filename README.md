@@ -1,4 +1,5 @@
 # shutterplate-arm
+# use "old" branch. "main" is'nt stable
 ![python](https://img.shields.io/badge/Python-3.8-yellow)
 ![ROS](https://img.shields.io/badge/ROS-Noetic-brightgreen)
 ![CMake](https://img.shields.io/badge/CMake-3.3-critical)
