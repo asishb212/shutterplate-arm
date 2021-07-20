@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="delay_tube_arm_assm">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="3.86209103842051E-06 6.01687125273654E-06 -0.0330326270350078"
+        rpy="0 0 0" />
+      <mass
+        value="0.731749593185753" />
+      <inertia
+        ixx="0.00233902413448347"
+        ixy="-4.99147368230219E-12"
+        ixz="-1.00837721323294E-08"
+        iyy="0.00141143034281188"
+        iyz="9.59845008143122E-12"
+        izz="0.0036217858731399" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delay_tube_arm_assm/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delay_tube_arm_assm/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_1">
+    <inertial>
+      <origin
+        xyz="0.00488053170287495 0.021659092355086 0.0308724325266844"
+        rpy="0 0 0" />
+      <mass
+        value="0.240991348683693" />
+      <inertia
+        ixx="0.00010324149549393"
+        ixy="-4.90037944851914E-06"
+        ixz="-1.18982487543498E-07"
+        iyy="8.25989727655583E-05"
+        iyz="-5.30129495736634E-07"
+        izz="0.000126890715770312" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delay_tube_arm_assm/meshes/Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delay_tube_arm_assm/meshes/Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -0.86565" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_2">
+    <inertial>
+      <origin
+        xyz="-0.0346602696006751 0.00814762414799671 0.107280322063265"
+        rpy="0 0 0" />
+      <mass
+        value="0.145059340528544" />
+      <inertia
+        ixx="0.000165229751263735"
+        ixy="7.9241811092054E-06"
+        ixz="2.19388592150161E-05"
+        iyy="0.00013570082909347"
+        iyz="-4.66514115340819E-05"
+        izz="7.54935461242882E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delay_tube_arm_assm/meshes/Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delay_tube_arm_assm/meshes/Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0361"
+      rpy="-0.2173 -0.76331 0.087499" />
+    <parent
+      link="Link_1" />
+    <child
+      link="Link_2" />
+    <axis
+      xyz="0.21982 0.97554 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_3">
+    <inertial>
+      <origin
+        xyz="0.0783075959168244 -0.0784232342924955 0.00622479812470229"
+        rpy="0 0 0" />
+      <mass
+        value="0.0827739576079267" />
+      <inertia
+        ixx="2.22114072127942E-05"
+        ixy="2.08893889829391E-05"
+        ixz="-4.0560866196817E-06"
+        iyy="8.16708003798582E-05"
+        iyz="1.33117345895139E-06"
+        izz="7.97842045082599E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delay_tube_arm_assm/meshes/Link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delay_tube_arm_assm/meshes/Link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_3"
+    type="revolute">
+    <origin
+      xyz="-0.03963 0.0089299 0.12244"
+      rpy="0.18774 0.69174 0.067826" />
+    <parent
+      link="Link_2" />
+    <child
+      link="Link_3" />
+    <axis
+      xyz="0.21982 0.97554 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="End_Effector">
+    <inertial>
+      <origin
+        xyz="0.019775 -0.015014 0.0022677"
+        rpy="0 0 0" />
+      <mass
+        value="0.016908" />
+      <inertia
+        ixx="1.6786E-06"
+        ixy="-1.7227E-07"
+        ixz="-1.1628E-07"
+        iyy="2.1152E-06"
+        iyz="-3.9602E-08"
+        izz="1.5235E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delay_tube_arm_assm/meshes/End_Effector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delay_tube_arm_assm/meshes/End_Effector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_4"
+    type="revolute">
+    <origin
+      xyz="0.10999 -0.024785 0.0074933"
+      rpy="0.016492 0.073058 0.00060273" />
+    <parent
+      link="Link_3" />
+    <child
+      link="End_Effector" />
+    <axis
+      xyz="0.21982 0.97554 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
